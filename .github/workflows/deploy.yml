@@ -31,16 +31,32 @@ jobs:
           docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/dino-card-game:v1 .
           docker push ${{ secrets.ACR_NAME }}.azurecr.io/dino-card-game:v1
 
+      - name: Check if Container Instance Exists
+        id: check-container
+        run: |
+          if az container show --resource-group ${{ secrets.AZURE_RG }} --name dino-card-game > /dev/null 2>&1; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Deploy to Azure Container Instances (ACI)
         run: |
-          az container create \
-            --resource-group ${{ secrets.AZURE_RG }} \
-            --name dino-card-game \
-            --image ${{ secrets.ACR_NAME }}.azurecr.io/dino-card-game:v1 \
-            --os-type Linux \
-            --cpu 1 \
-            --memory 1 \
-            --ports 3000 \
-            --dns-name-label dino-card-game \
-            --registry-username ${{ secrets.ACR_USERNAME }} \
-            --registry-password ${{ secrets.ACR_PASSWORD }}
+          if [ "${{ steps.check-container.outputs.exists }}" == "true" ]; then
+            # Update existing container
+            az container update \
+              --resource-group ${{ secrets.AZURE_RG }} \
+              --name dino-card-game \
+              --image ${{ secrets.ACR_NAME }}.azurecr.io/dino-card-game:v1
+          else
+            # Create new container
+            az container create \
+              --resource-group ${{ secrets.AZURE_RG }} \
+              --name dino-card-game \
+              --image ${{ secrets.ACR_NAME }}.azurecr.io/dino-card-game:v1 \
+              --os-type Linux \
+              --cpu 1 \
+              --memory 1 \
+              --ports 3000 \
+              --dns-name-label dino-card-game
+          fi
