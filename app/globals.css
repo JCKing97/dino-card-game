@@ -35,8 +35,8 @@ body {
   padding: 12px 25px;
   color: var(--nhm-lime-green);
   text-decoration: none;
-  border: 4px solid var(--nhm-lime-green);
-  border-radius: 24px;
+  border: 3px solid var(--nhm-lime-green);
+  border-radius: 34px;
   font-weight: bold;
   transition: background-color 0.3s;
 }

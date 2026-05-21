@@ -15,6 +15,7 @@ export default function Header() {
             <Link href="#" className={styles.link}>What's on</Link>
             <Link href="#" className={styles.link}>Support us</Link>
             <Link href="#" className={styles.link}>Shop</Link>
+            <Link href="/dino-card-game" className={styles.link}>Dino Card Game</Link>
           </nav>
         </div>
       </div>
