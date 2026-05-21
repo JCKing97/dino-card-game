@@ -8,19 +8,16 @@ export default function Home() {
     {
       title: 'Dinosaurs',
       description: 'Discover the prehistoric giants that once roamed the Earth.',
-      // imageUrl: 'https://www.nhm.ac.uk/discover/science/collections/dinosaurs/_jcr_content/parsys/image_1417489997.img.1280.high.jpg/1589323852199.jpg',
       buttonText: 'Learn more',
     },
     {
       title: 'Minerals',
       description: 'Explore the beauty and diversity of Earth\'s geological treasures.',
-      // imageUrl: 'https://www.nhm.ac.uk/discover/science/collections/minerals/_jcr_content/parsys/image_1417489997.img.1280.high.jpg/1589323852199.jpg',
       buttonText: 'Learn more',
     },
     {
       title: 'Botany',
       description: 'Discover the incredible diversity of plant life on Earth.',
-      // imageUrl: 'https://www.nhm.ac.uk/discover/science/collections/botany/_jcr_content/parsys/image_1417489997.img.1280.high.jpg/1589323852199.jpg',
       buttonText: 'Learn more',
     },
   ];
@@ -29,19 +26,16 @@ export default function Home() {
     {
       title: 'Exhibitions',
       description: 'Explore our latest exhibitions and events.',
-      // imageUrl: 'https://www.nhm.ac.uk/discover/science/exhibitions/_jcr_content/parsys/image_1417489997.img.1280.high.jpg/1589323852199.jpg',
       buttonText: 'See what\'s on',
     },
     {
       title: 'Events',
       description: 'Join us for talks, workshops, and special events.',
-      // imageUrl: 'https://www.nhm.ac.uk/discover/science/talks-events/_jcr_content/parsys/image_1417489997.img.1280.high.jpg/1589323852199.jpg',
       buttonText: 'Find an event',
     },
     {
       title: 'Learning',
       description: 'Discover our educational resources and programs.',
-      // imageUrl: 'https://www.nhm.ac.uk/discover/science/learning/_jcr_content/parsys/image_1417489997.img.1280.high.jpg/1589323852199.jpg',
       buttonText: 'Explore learning',
     },
   ];

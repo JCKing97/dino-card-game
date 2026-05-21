@@ -8,10 +8,9 @@ interface CardProps {
   buttonText: string;
 }
 
-export default function Card({ title, description, imageUrl, buttonText }: CardProps) {
+export default function Card({ title, description, buttonText }: CardProps) {
   return (
     <div className={styles.card}>
-      {/* <img src={imageUrl} alt={title} className={styles.image} /> */}
       <div className={styles['card-content']}>
         <h3>{title}</h3>
         <p>{description}</p>
