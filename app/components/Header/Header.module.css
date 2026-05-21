@@ -51,10 +51,19 @@
   gap: 30px;
 }
 
+.header-nav .homelink {
+  color: #fff;
+  font-size: larger;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
 .header-nav .link {
   color: #fff;
-  font-weight: 1000;
+  font-size: large;
+  font-weight: 600;
   transition: color 0.3s;
+  text-decoration: none;
 }
 
 .header-nav .link:hover {

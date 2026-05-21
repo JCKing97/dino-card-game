@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--nhm-blue);
+  background-color: var(--nhm-purple);
   color: #fff;
   padding: 50px 0 20px;
 }
@@ -37,7 +37,7 @@
 }
 
 .footer-col ul li a:hover {
-  color: var(--nhm-light-blue);
+  text-decoration: underline;
 }
 
 .footer-bottom {

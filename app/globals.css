@@ -7,6 +7,7 @@
   --nhm-purple: #290340;
   --nhm-hover-purple: #3e1c53;
   --nhm-lime-green: #c9f708;
+  --nhm-hover-lime-green: #afdd00;
   --nhm-blue: #003d7a;
   --nhm-light-blue: #00a1de;
   --nhm-text: #333;
@@ -31,8 +32,10 @@ body {
   display: inline-block;
   background-color: var(--nhm-purple);
   padding: 12px 25px;
-  text-decoration-color: var(--nhm-lime-green);
+  color: var(--nhm-lime-green);
+  text-decoration: none;
   border-color: var(--nhm-lime-green);
+  border-width: medium;
   border-radius: 24px;
   font-weight: bold;
   transition: background-color 0.3s;
@@ -40,6 +43,23 @@ body {
 
 .btn:hover {
   background-color: var(--nhm-hover-purple);
+}
+
+.btn-color-invert {
+  display: inline-block;
+  background-color: var(--nhm-lime-green);
+  padding: 12px 25px;
+  color: var(--nhm-purple);
+  text-decoration: none;
+  border-color: var(--nhm-lime-green);
+  border-width: medium;
+  border-radius: 24px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-color-invert:hover {
+  background-color: var(--nhm-hover-lime-green);
 }
 
 /* Responsive Design */

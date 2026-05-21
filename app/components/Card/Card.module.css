@@ -10,12 +10,6 @@
   transform: translateY(-5px);
 }
 
-.image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
 .card-content {
   padding: 20px;
 }
@@ -23,6 +17,7 @@
 .card-content h3 {
   margin-bottom: 10px;
   font-size: 20px;
+  color: #fff;
 }
 
 .card-content p {
