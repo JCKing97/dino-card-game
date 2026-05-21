@@ -37,6 +37,7 @@ jobs:
             --resource-group ${{ secrets.AZURE_RG }} \
             --name dino-card-game \
             --image ${{ secrets.ACR_NAME }}.azurecr.io/dino-card-game:v1 \
+            --os-type Linux \
             --cpu 1 \
             --memory 1 \
             --ports 3000 \
