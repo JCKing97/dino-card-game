@@ -73,11 +73,14 @@
 .dropdown-link {
   display: block;
   padding: 10px 16px;
-  color: var(--nhm-purple);
+  color: #fff;
+  font-weight: 600;
+  font-size: medium;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: color 0.3s;
 }
 
 .dropdown-link:hover {
   color: var(--nhm-lime-green);
+  text-decoration: underline;
 }

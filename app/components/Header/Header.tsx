@@ -28,11 +28,18 @@ export default function Header() {
               <Link href="#" className={styles.link} onClick={(e) => { e.preventDefault(); toggleDropdown(); }}>Games&#x2335;</Link>
               {isDropdownOpen && (
                 <div className={styles['dropdown-menu']}>
-                  <Link href="/games/jurassic-jumble" className={styles.link}>Jurassic Jumble</Link>
-                  <Link href="#" className={styles.link}>Memory Game</Link>
-                  <Link href="#" className={styles.link}>Quiz</Link>
-                  <Link href="#" className={styles.link}>Treasure Hunt</Link>
+                  <Link href="/games/jurassic-jumble" className={styles['dropdown-link']}>Jurassic Jumble</Link>
+                  <Link href="#" className={styles['dropdown-link']}>Memory Game</Link>
+                  <Link href="#" className={styles['dropdown-link']}>Quiz</Link>
+                  <Link href="#" className={styles['dropdown-link']}>Treasure Hunt</Link>
                 </div>
+                // <ul className={styles}>
+                //     <li><Link href="/games/jurassic-jumble" className={styles.link}>Jurassic Jumble</Link></li>
+                //     <li><Link href="#" className={styles.link}>Memory Game</Link></li>
+                //     <li><Link href="#" className={styles.link}>Quiz</Link></li>
+                //     <li><Link href="#" className={styles.link}>Treasure Hunt</Link></li>
+                //   </ul>
+                // </div>
               )}
             </div>
           </nav>
