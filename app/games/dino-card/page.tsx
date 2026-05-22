@@ -5,7 +5,6 @@ export default function Page() {
   return (
     <main>
       <Header />
-      <Hero />
       <section className="py-16">
         <div className="container mx-auto px-4">
           <p>Dino card game</p>
