@@ -24,19 +24,27 @@ export default function Header() {
             <Link href="#" className={styles.link}>What's on</Link>
             <Link href="#" className={styles.link}>Support us</Link>
             <Link href="#" className={styles.link}>Shop</Link>
-            <div className={styles['nav-dropdown-container']}>
-              <button
-                className={styles['nav-dropdown-button']}
-                onClick={toggleDropdown}
+            <div
+              className={styles['dropdown-container']}
+              onMouseEnter={() => setIsDropdownOpen(true)}
+              onMouseLeave={() => setIsDropdownOpen(false)}
+            >
+              <Link
+                href="#"
+                className={styles.link}
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleDropdown();
+                }}
               >
-                Games v
-              </button>
+                Games
+              </Link>
               {isDropdownOpen && (
-                <div className={styles['nav-dropdown-menu']}>
-                  <Link href="/games/dino-card" className={styles.link}>Dino Card Game</Link>
-                  <Link href="#" className={styles.link}>Memory Game</Link>
-                  <Link href="#" className={styles.link}>Quiz</Link>
-                  <Link href="#" className={styles.link}>Treasure Hunt</Link>
+                <div className={styles['dropdown-menu']}>
+                  <Link href="#" className={styles['dropdown-link']}>Jigsaw Puzzles</Link>
+                  <Link href="#" className={styles['dropdown-link']}>Memory Game</Link>
+                  <Link href="#" className={styles['dropdown-link']}>Quiz</Link>
+                  <Link href="#" className={styles['dropdown-link']}>Treasure Hunt</Link>
                 </div>
               )}
             </div>
