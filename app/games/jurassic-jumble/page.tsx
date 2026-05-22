@@ -4,16 +4,7 @@ import GameBoard from '@/components/GameBoard';
 import GameCard from '@/components/GameCard';
 
 export default function Page() {
-  return (
-
-    const gameCardLeftProps = {
-      title: 'Tyrannosaurus Rex', description: 'Monstrous carnivore!'
-    }
-
-    const gameCardLeftProps = {
-      title: 'Diplodocus', description: 'Giant herbivore!'
-    }
-
+  return (  
     <main>
       <Header />
       <section className="py-16">
