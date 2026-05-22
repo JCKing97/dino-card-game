@@ -33,7 +33,7 @@ export default function Header() {
               </button>
               {isDropdownOpen && (
                 <div className={styles['nav-dropdown-menu']}>
-                  <Link href="#" className={styles.link}>Dino Card Game</Link>
+                  <Link href="/games/dino-card" className={styles.link}>Dino Card Game</Link>
                   <Link href="#" className={styles.link}>Memory Game</Link>
                   <Link href="#" className={styles.link}>Quiz</Link>
                   <Link href="#" className={styles.link}>Treasure Hunt</Link>
