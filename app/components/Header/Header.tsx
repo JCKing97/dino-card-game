@@ -19,7 +19,6 @@ export default function Header() {
             <Link href="/" className={styles.link}>Natural History Museum</Link>
           </div>
           <nav className={styles['header-nav']}>
-            <Link href="#" className={styles.link}>Visit</Link>
             <Link href="#" className={styles.link}>Explore</Link>
             <Link href="#" className={styles.link}>What's on</Link>
             <Link href="#" className={styles.link}>Support us</Link>
@@ -33,13 +32,6 @@ export default function Header() {
                   <Link href="#" className={styles['dropdown-link']}>Quiz</Link>
                   <Link href="#" className={styles['dropdown-link']}>Treasure Hunt</Link>
                 </div>
-                // <ul className={styles}>
-                //     <li><Link href="/games/jurassic-jumble" className={styles.link}>Jurassic Jumble</Link></li>
-                //     <li><Link href="#" className={styles.link}>Memory Game</Link></li>
-                //     <li><Link href="#" className={styles.link}>Quiz</Link></li>
-                //     <li><Link href="#" className={styles.link}>Treasure Hunt</Link></li>
-                //   </ul>
-                // </div>
               )}
             </div>
           </nav>

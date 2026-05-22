@@ -1,3 +1,30 @@
+.game-board-controls {
+  background-color: var(--nhm-purple);
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.game-board-controls h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.game-board-controls p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.game-board-controls-buttons {
+  display: flex;
+}
+
+.game-board-controls-button {
+  display: flex;
+}
+
+
 .gameboard {
     display: grid;
     grid-template-columns: 1fr 1fr;
