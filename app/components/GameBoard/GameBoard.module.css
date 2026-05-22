@@ -18,7 +18,7 @@
 
 .game-board-controls-buttons {
   display: inline-grid;
-  grid-template-columns: 30% 30%;
+  grid-template-columns: 100px 100px;
   grid-gap: 20px;
 }
 
@@ -30,7 +30,7 @@
 
 .gameboard {
   display: inline-grid;
-  grid-template-columns: 30% 30%;
+  grid-template-columns: 200px 200px;
   grid-gap: 20px;
 }
 
