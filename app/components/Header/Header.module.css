@@ -64,24 +64,20 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
+  background-color: var(--nhm-hover-purple);
   min-width: 200px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
   z-index: 1;
-  margin-top: 5px;
   padding: 10px 0;
 }
 
 .dropdown-link {
   display: block;
   padding: 10px 16px;
-  color: var(--nhm-purple-dark);
+  color: var(--nhm-purple);
   text-decoration: none;
   transition: background-color 0.3s;
 }
 
 .dropdown-link:hover {
-  background-color: #f5f5f5;
-  color: var(--nhm-purple-light);
+  color: var(--nhm-lime-green);
 }
