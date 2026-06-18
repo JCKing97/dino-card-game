@@ -4,25 +4,12 @@ import Link from 'next/link';
 import styles from './GameBoard.module.css';
 import GameCard from '@/components/GameCard';
 import { useState } from "react";
-import { refreshCards } from "./card-utils";
-
-interface GameBoardProps {
-  gameCardLeft: React.ReactNode;
-  gameCardRight: React.ReactNode;
-}
-
-interface GameCardProps {
-  title: string;
-  description: string;
-}
+import { refreshCards, GameCardProps } from "../../lib/card-utils";
 
 export default function GameBoard() {
 
   // State to hold the current cards
-  const [cards, setCards] = useState<[GameCardProps, GameCardProps]>([
-    { title: 'T-Rex', description: 'Ferocious carnivore!' },
-    { title: 'Diplodocus', description: 'Gentle giant!' },
-  ]);
+  const [cards, setCards] = useState<[GameCardProps, GameCardProps]>(refreshCards());
 
   // Function to refresh the cards
   const handleRefreshCards = () => {
@@ -47,10 +34,10 @@ export default function GameBoard() {
         <div className={styles.gameboard}>
             <div className={styles['game-board-card-container']}>
                 <div className={styles['game-board-card-container']}>
-                    <GameCard title={cards[0].title} description={cards[0].description} />
+                    <GameCard title={cards[0].title} description={cards[0].description} image={cards[0].image} />
                 </div>
                 <div className={styles['game-board-card-container']}>
-                    <GameCard title={cards[1].title} description={cards[1].description} />
+                    <GameCard title={cards[1].title} description={cards[1].description} image={cards[1].image} />
                 </div>
             </div>
         </div>

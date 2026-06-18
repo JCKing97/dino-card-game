@@ -26,3 +26,9 @@
   color: var(--nhm-purple);
   margin-bottom: 15px;
 }
+
+.game-card-content img {
+  max-width: 500;
+  max-height: 400;
+}
+
