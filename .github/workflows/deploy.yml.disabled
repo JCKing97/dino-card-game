@@ -28,19 +28,19 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/dino-card-game:v1 .
-          docker push ${{ secrets.ACR_NAME }}.azurecr.io/dino-card-game:v1
+          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/dino-card-game-frontend:v1 .
+          docker push ${{ secrets.ACR_NAME }}.azurecr.io/dino-card-game-frontend:v1
 
       - name: Deploy to Azure Container Instances (ACI)
         run: |
           az container create \
             --resource-group ${{ secrets.AZURE_RG }} \
-            --name dino-card-game \
-            --image ${{ secrets.ACR_NAME }}.azurecr.io/dino-card-game:v1 \
+            --name dino-card-game-frontend \
+            --image ${{ secrets.ACR_NAME }}.azurecr.io/dino-card-game-frontend:v1 \
             --os-type Linux \
             --cpu 1 \
             --memory 1 \
             --ports 3000 \
-            --dns-name-label dino-card-game \
+            --dns-name-label dino-card-game-frontend \
             --registry-username ${{ secrets.ACR_USERNAME }} \
             --registry-password ${{ secrets.ACR_PASSWORD }}

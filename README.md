@@ -8,7 +8,7 @@ npm install
 Then, start the development server:
 
 ```bash
-    npm run dev
+npm run dev
 ```
 Finally, open your browser and navigate to: [http://localhost:3000](http://localhost:3000)
 
@@ -41,13 +41,13 @@ cd path/to/your/projects
 Clone the repository:
 
 ```bash
-git clone https://github.com/JCKing97/dino-card-game.git
+git clone https://github.com/JCKing97/dino-card-game-frontend.git
 ```
 
 Navigate to the project directory:
 
 ```bash
-cd your-repo-name
+cd dino-card-game-frontend
 ```
 
 ### Step 2: Build the Docker Image
@@ -57,7 +57,7 @@ Ensure Docker Desktop is running. Open the Docker Desktop app and verify it show
 Build the Docker image:
 
 ```bash
-docker build -t dino-card-game .
+docker build -t dino-card-game-frontend .
 ```
 
 ### Step 3: Run the Docker Container
@@ -65,7 +65,7 @@ docker build -t dino-card-game .
 Start the Docker container:
 
 ```bash
-docker run -p 3000:3000 -d dino-card-game
+docker run -p 3000:3000 -d dino-card-game-frontend
 ```
 -p 3000:3000 maps port 3000 on your local machine to port 3000 in the container.
 -d runs the container in detached mode (in the background).
@@ -91,7 +91,7 @@ List all running containers:
 ```bash
 docker ps
 ```
-Find the dino-card-game container in the list and note its CONTAINER ID.
+Find the dino-card-game-frontend container in the list and note its CONTAINER ID.
 Stop the container:
 
 ```bash
@@ -116,7 +116,7 @@ Solution:
     Change the port mapping in the docker run command:
 
     ```bash
-    docker run -p 3001:3000 -d dino-card-game
+    docker run -p 3001:3000 -d dino-card-game-frontend
     ```
     Access the app at http://localhost:3001.
 
@@ -146,7 +146,7 @@ Solution:
     Rebuild the Docker image:
 
     ```bash
-    docker build -t dino-card-game .
+    docker build -t dino-card-game-frontend .
     ```
 
 ## Running deployed as a container on Azure

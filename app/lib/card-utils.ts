@@ -29,7 +29,7 @@ const dinos = [
   },
   {
     title: 'Brachiosaurus',
-    description: 'Gentle giant!',
+    description: 'Gentle giant',
     image: "https://live.staticflickr.com/65535/55342406499_200e2b116b_c.jpg"
   },
   {
@@ -54,7 +54,7 @@ const dinos = [
   },
   {
     title: 'Archaeopteryx',
-    description: 'The link between dinosaurs and birds!',
+    description: 'The link between dinosaurs and birds',
     image: "https://live.staticflickr.com/65535/55342202096_766c99d5e4_z.jpg"
   }
 ];
