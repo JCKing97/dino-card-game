@@ -16,6 +16,11 @@ export const refreshCards = (): [GameCardProps, GameCardProps] => {
   return [card1, card2];
 };
 
+// Function to check card equality
+export const cardsEqual = (card1: GameCardProps, card2: GameCardProps): boolean => {
+  return card1.title == card2.title;
+};
+
 const dinos = [
   {
     title: 'Tyrannosaurus Rex',
