@@ -1,60 +1,42 @@
+import axios from "axios";
+import dinoConfig from "../../dino.config";
+
 export interface GameCardProps {
-  title: string;
+  name: string;
   description: string;
   image: string;
 }
 
-// Function to generate a random card
-export const getRandomCard = (): GameCardProps => {
-  return dinos[Math.floor(Math.random() * dinos.length)];
-};
-
 // Function to refresh two cards
-export const refreshCards = (): [GameCardProps, GameCardProps] => {
-  const card1 = getRandomCard();
-  const card2 = getRandomCard();
-  return [card1, card2];
+export const getDinos = async (dinoCount: number): Promise<GameCardProps[]> => {
+  const params = { dinoCount: dinoCount };
+  const url = `/api/proxy/dinos`;
+  console.debug('getDinos: request', { url, params });
+  try {
+    const response = await axios.get(url, { params });
+    console.debug('getDinos: response', response.data);
+    return response.data.dinos;
+  } catch (err) {
+    console.error('getDinos: error', err);
+    throw err;
+  }
 };
 
 // Function to check card equality
-export const cardsEqual = (card1: GameCardProps, card2: GameCardProps): boolean => {
-  return card1.title == card2.title;
+export const cardsEqual = async (card1: GameCardProps | undefined, card2: GameCardProps | undefined): Promise<boolean> => {
+  if (card1 === undefined || card2 === undefined) {
+    return true;
+  }
+  const params = { card1: card1.name, card2: card2.name };
+  const url = `/api/proxy/dinos/allEqual`;
+  console.debug('cardsEqual: request', { url, params });
+  try {
+    const response = await axios.get(url, { params });
+    console.debug('cardsEqual: response', response.data);
+    return response.data.equal;
+  } catch (err) {
+    console.error('cardsEqual: error', err);
+    throw err;
+  }
 };
 
-const dinos = [
-  {
-    title: 'Tyrannosaurus Rex',
-    description: 'Ferocious carnivore!',
-    image: "https://live.staticflickr.com/65535/55342339193_7c643e2acd_c.jpg"
-  },
-  {
-    title: 'Brachiosaurus',
-    description: 'Gentle giant',
-    image: "https://live.staticflickr.com/65535/55342406499_200e2b116b_c.jpg"
-  },
-  {
-    title: 'Velociraptor',
-    description: 'Pack hunter!',
-    image: "https://live.staticflickr.com/65535/55342202106_4fb61d2f13_c.jpg"
-  },
-  {
-    title: 'Triceratops',
-    description: 'A three-horned herbivore',
-    image: "https://live.staticflickr.com/65535/55342339203_563531d3bf_c.jpg"
-  },
-  {
-    title: 'Stegosaurus',
-    description: 'A spiny herbivore with a barbed tail',
-    image: "https://live.staticflickr.com/65535/55342202066_1487f536cb_c.jpg"
-  },
-  {
-    title: 'Pterodactyl',
-    description: 'A flying pterosaur!',
-    image: "https://live.staticflickr.com/65535/55342348978_b997274ed7_c.jpg"
-  },
-  {
-    title: 'Archaeopteryx',
-    description: 'The link between dinosaurs and birds',
-    image: "https://live.staticflickr.com/65535/55342202096_766c99d5e4_z.jpg"
-  }
-];
