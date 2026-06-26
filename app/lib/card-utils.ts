@@ -27,7 +27,7 @@ export const cardsEqual = async (card1: GameCardProps | undefined, card2: GameCa
   if (card1 === undefined || card2 === undefined) {
     return true;
   }
-  const params = { card1: card1.name, card2: card2.name };
+  const params = { dinoNames: [card1.name, card2.name] };
   const url = `/api/proxy/dinos/allEqual`;
   console.debug('cardsEqual: request', { url, params });
   try {
